@@ -35,7 +35,7 @@ export const Episode = sequelize.define<EpisodeInstance, Episode>("episodes", {
   },
   order: {
     allowNull: false,
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
   },
   videoUrl: {
     type: DataTypes.STRING,

@@ -15,7 +15,6 @@ module.exports = {
       },
       position: {
         allowNull: false,
-        unique: true,
         type: Sequelize.DataTypes.INTEGER,
       },
       created_at: {
