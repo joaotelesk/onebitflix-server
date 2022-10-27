@@ -14,7 +14,6 @@ export default function Dashboard() {
   const [resources, setResources] = useState<{ [key: string]: Number }>();
   const [currentadmin] = useCurrentAdmin();
   const api = new ApiClient();
-
   useEffect(() => {
     fetchDashboardData();
   }, []);
