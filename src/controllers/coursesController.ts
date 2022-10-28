@@ -6,14 +6,24 @@ export const coursesController = {
   featured: async (req: Request, res: Response) => {
     try {
       const featuredCourses = await courseService.getrandomFeaturedCourses();
-      res.json(featuredCourses);
+      return res.json(featuredCourses);
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message });
       }
     }
   },
-
+  //GET /courses/newest
+  newest: async (req: Request, res: Response) => {
+    try {
+      const newstCourses = await courseService.getTopTenNewest();
+      return res.json(newstCourses);
+    } catch (err) {
+      if (err instanceof Error) {
+        return res.status(400).json({ message: err.message });
+      }
+    }
+  },
   //GET /courses/:id
   show: async (req: Request, res: Response) => {
     const { id } = req.params;
