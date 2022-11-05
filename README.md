@@ -44,13 +44,12 @@ O objetivo do projeto será criar de uma aplicação EAD de cursos inspirado net
 
 Siga os passos e inclua as informações abaixo:
 
-| Passo                                                                                     | Comando/informação      |
-| ----------------------------------------------------------------------------------------- | ----------------------- |
-| Faça o fork                                                                               | `botão de forkar`       |
-| Faça o clone                                                                              | `git clone`             |
-| Instale as dependências após acessar a pasta projeto                                      | `npm i`                 |
-| Crie as variaveis de ambiente para integrar com Firebase e inclua os valores da sua conta | `conforme .env.example` |
-| Rode o projeto                                                                            | `npm run dev`           |
+| Passo                                                | Comando/informação |
+| ---------------------------------------------------- | ------------------ |
+| Faça o fork                                          | `botão de forkar`  |
+| Faça o clone                                         | `git clone`        |
+| Instale as dependências após acessar a pasta projeto | `npm i`            |
+| Rode o projeto                                       | `npm run dev`      |
 
 <br />
 <br />
