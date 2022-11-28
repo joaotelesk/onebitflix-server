@@ -7,4 +7,7 @@ export const jwtService = {
       expiresIn: expiration,
     });
   },
+  verifyToken: (token: string, callbacjfn: jwt.VerifyCallback) => {
+    jwt.verify(token, secret, callbacjfn);
+  },
 };
