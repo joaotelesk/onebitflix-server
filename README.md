@@ -54,20 +54,20 @@ Siga os passos e inclua as informações abaixo:
 <br />
 <br />
 
-### 😎 Concluido
+### 😎 Concluído
 
 - Criação do banco de dados
   -criação das tabelas(categoria, cursos e episódio) e seus relacionamentos
 - Criação e conexão do painel administrativos utilizando o Admin.js
 - Criação de endPoints(curos categorias e vídeo)
+- Criação e configuração do relacionamento tabela Usuários
+- Criação de um endpoint de autenticação do usuário com json web token
 
 <br />
 <br />
 
 ### 😎 Falta finalizar
 
-- Criação e configuração do relacionamento tabela Usuários
-- Criação de um endpoint de autenticação do usuário com json web token
 - Criação de endpoint de favoritos
 - Adição de progresso de um episódio
 - Criação de endpoints de obter informação e atualização de usuários
