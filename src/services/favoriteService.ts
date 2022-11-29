@@ -29,4 +29,12 @@ export const favoriteService = {
       courses,
     };
   },
+  delete: async (userId: number, courseId: number) => {
+    await Favorite.destroy({
+      where: {
+        userId,
+        courseId,
+      },
+    });
+  },
 };
