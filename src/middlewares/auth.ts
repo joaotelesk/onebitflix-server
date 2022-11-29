@@ -25,6 +25,8 @@ export function ensureAuth(
         .status(401)
         .json({ messege: "Não Autorizado: token inválido" });
     const user = await userService.findByEmail((decoded as JwtPayload).email);
+
+    req.user = user;
     next();
   });
 }
