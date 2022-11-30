@@ -8,4 +8,12 @@ export const LikeService = {
     });
     return like;
   },
+  delete: async (userId: number, courseId: number) => {
+    await Like.destroy({
+      where: {
+        userId,
+        courseId,
+      },
+    });
+  },
 };
