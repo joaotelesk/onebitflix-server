@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { AuthenticatedRequest } from "../middlewares/auth";
-import { LikeService } from "../services/likeService";
+import { likeService } from "../services/likeService";
 
 export const LikesController = {
   // POST /likes
@@ -8,7 +8,7 @@ export const LikesController = {
     const userId = req.user!.id;
     const { courseId } = req.body;
     try {
-      const like = await LikeService.create(userId, courseId);
+      const like = await likeService.create(userId, courseId);
       return res.status(201).json(like);
     } catch (err) {
       if (err instanceof Error) {
@@ -19,9 +19,9 @@ export const LikesController = {
   // DELETE /likes/:id
   delete: async (req: AuthenticatedRequest, res: Response) => {
     const userId = req.user!.id;
-    const { courseId } = req.body;
+    const courseId = req.params.id;
     try {
-      await LikeService.delete(userId, courseId);
+      await likeService.delete(userId, Number(courseId));
       return res.status(204).send();
     } catch (err) {
       if (err instanceof Error) {
