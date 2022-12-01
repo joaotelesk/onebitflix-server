@@ -1,6 +1,7 @@
 import bcrypt from "bcrypt";
 import { sequelize } from "../database";
 import { DataTypes, Model, Optional } from "sequelize";
+import { EpisodeInstance } from "./Episode";
 
 type checkPasswordCallback = (err?: Error, isSame?: boolean) => void;
 export interface User {
@@ -19,6 +20,7 @@ export interface UserCreationAttributes extends Optional<User, "id"> {}
 export interface UserInstance
   extends Model<User, UserCreationAttributes>,
     User {
+  episodes?: EpisodeInstance[];
   checkPassword: (password: string, calbackfn: checkPasswordCallback) => void;
 }
 
