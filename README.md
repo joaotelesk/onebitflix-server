@@ -1,4 +1,4 @@
-# Projeto Guiado - Onebitflix 🚧
+# Projeto Guiado - Onebitflix
 
 ![image](https://media.giphy.com/media/hqNj8nQ2M7ot6WFYdi/giphy.gif)
 
@@ -15,27 +15,28 @@
 - Painel administrativo utilizado Admin.js
 - Construção de API com Node.js e sequelize
 - PostgreSQL
-- Construção web app com Next.js
-- Deploy e configuração para evitar o erro 404
 
 ---
 
 # 🧠 Contexto
 
-O objetivo do projeto será criar de uma aplicação EAD de cursos inspirado netflix, onde irá existir usuários do tipo padrão que irão poder consumir os cursos e episódios e admin que irá poder fazer todas as alterações(categoria, curso, episódio,...), aprofundar meus conhecimentos em programação através da construção de uma aplicação completa do back-end ao front-end e enriquecer o meu portfólio.
+O objetivo do projeto foi criar o back-end de uma aplicação EAD de cursos inspirado netflix, aprofundar meus conhecimentos em programação através da construção de uma aplicação completa do back-end ao front-end e enriquecer o meu portfólio.
 <br />
 
 ### `Tecnologias usadas`
 
-| Ferramenta   | Descrição                                                                                                    |
-| ------------ | ------------------------------------------------------------------------------------------------------------ |
-| `node.js`    | linguagem de desenvolvimento do lado do servidor                                                             |
-| `admin.js`   | é uma interface de administração automática que pode ser utilizada para conectar aplicação ao banco de dados |
-| `npm`        | gerenciador de pacotes                                                                                       |
-| `bcrypt`     | Biblioteca utilizada para encripitar texto “puro” em dados indecifráveis                                     |
-| `express`    | é um Framework para o desenvolvimento de aplicações JavaScript com o Node.js.                                |
-| `postgreSQL` | sistema gerenciador de banco de dados objeto-relacional baseado no POSTGRES                                  |
-| `Github`     | Hospedagem do código fonte integrado com gerenciador de versionamento                                        |
+| Ferramenta     | Descrição                                                                                                     |
+| -------------- | ------------------------------------------------------------------------------------------------------------- |
+| `node.js`      | linguagem de desenvolvimento do lado do servidor                                                              |
+| `sequelize`    | é um ORM para Node.js baseado em Promises, para os bancos PostgreSQL, MySQL, MariaDB, SQLite e MS SQL Server. |
+| `express`      | é um framework para Node.js que fornece recursos mínimos para construção de servidores web                    |
+| `postgreSQL`   | sistema gerenciador de banco de dados objeto-relacional baseado no POSTGRES                                   |
+| `admin.js`     | é uma interface de administração automática que pode ser utilizada para conectar aplicação ao banco de dados  |
+| `bcrypt`       | Biblioteca utilizada para encripitar texto “puro” em dados indecifráveis                                      |
+| `jsonwebtoken` | é um Framework para criação de dados com assinatura opcional e/ou criptografia.                               |
+| `cors`         | é um Framework que permite que um site acesse recursos de outro site mesmo estando em domínios diferentes.    |
+| `npm`          | gerenciador de pacotes                                                                                        |
+| `Github`       | Hospedagem do código fonte integrado com gerenciador de versionamento                                         |
 
 <br />
 <br />
@@ -62,16 +63,16 @@ Siga os passos e inclua as informações abaixo:
 - Criação de endPoints(curos categorias e vídeo)
 - Criação e configuração do relacionamento tabela Usuários
 - Criação de um endpoint de autenticação do usuário com json web token
+- Criação de endpoint de favoritos
+- Adição de progresso de um episódio
+- Criação de endpoints de obter informação e atualização de usuários
 
 <br />
 <br />
 
 ### 😎 Falta finalizar
 
-- Criação de endpoint de favoritos
-- Adição de progresso de um episódio
-- Criação de endpoints de obter informação e atualização de usuários
-- Construção do front-end da aplicação
+- Deploy
 
 ---
 
