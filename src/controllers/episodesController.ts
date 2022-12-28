@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { AuthenticatedRequest } from "../middlewares/auth";
-import { episodeSercice } from "../services/episodeService";
+import { episodeService } from "../services/episodeService";
 
 export const episodesController = {
   // GET /episodes/stream?videoUrl=
@@ -13,7 +13,7 @@ export const episodesController = {
         throw new Error("videoUrl must be of type 'string'");
       }
 
-      episodeSercice.streamEpisodeToResponse(res, videoUrl, range);
+      episodeService.streamEpisodeToResponse(res, videoUrl, range);
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message });
@@ -25,7 +25,7 @@ export const episodesController = {
     const userId = req.user!.id;
     const episodeId = req.params.id;
     try {
-      const watchTime = await episodeSercice.getWatchTime(
+      const watchTime = await episodeService.getWatchTime(
         userId,
         Number(episodeId)
       );
@@ -42,7 +42,7 @@ export const episodesController = {
     const episodeId = Number(req.params.id);
     const { seconds } = req.body;
     try {
-      const watchTime = await episodeSercice.setWatchTime({
+      const watchTime = await episodeService.setWatchTime({
         episodeId,
         seconds,
         userId,
